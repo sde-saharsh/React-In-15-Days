@@ -1,0 +1,28 @@
+.root {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .home {
+    margin-left: 270px; /* enough space for the sidebar */
+    padding: 20px;
+    font-size: 30px;
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #333;
+  }
+  
