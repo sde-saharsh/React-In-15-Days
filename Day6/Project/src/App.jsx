@@ -2,6 +2,9 @@ import React from 'react';
 import Child from './Child';
 import { useState } from 'react';
 import Controlled from './Controlled'
+import CheckBox from './CheckBox';
+import Radio from './Radio'
+import DropDown from './DropDown'
 
 const App = () => {
 
@@ -67,6 +70,9 @@ const App = () => {
 
 
       <Controlled />
+      <CheckBox />
+      <Radio />
+      <DropDown/>
 
       
     </div>
