@@ -44,7 +44,7 @@ const College = () => {
       <h2 style={headingStyle}>🏫 College Section</h2>
 
       <nav style={navStyle}>
-        <NavLink to="student" style={({ isActive }) => (isActive ? { ...linkStyle, ...activeStyle } : linkStyle)}>
+        <NavLink to="" style={({ isActive }) => (isActive ? { ...linkStyle, ...activeStyle } : linkStyle)}>
           Student
         </NavLink>
         <NavLink to="colleges" style={({ isActive }) => (isActive ? { ...linkStyle, ...activeStyle } : linkStyle)}>

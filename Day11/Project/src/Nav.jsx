@@ -1,32 +1,33 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const Nav = () => {
   const navStyle = {
-    backgroundColor: '#1f1f1f',
-    padding: '1rem',
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '2rem',
+    backgroundColor: "#1f1f1f",
+    padding: "1rem",
+    display: "flex",
+    justifyContent: "center",
+    gap: "2rem",
   };
 
   const linkStyle = {
-    color: 'white',
-    textDecoration: 'none',
-    fontSize: '1.1rem',
-    fontWeight: '500',
-    transition: 'color 0.3s ease',
+    color: "white",
+    textDecoration: "none",
+    fontSize: "1.1rem",
+    fontWeight: "500",
+    transition: "color 0.3s ease",
   };
 
   const handleHover = (e) => {
-    e.target.style.color = '#f4c542';
+    e.target.style.color = "#f4c542";
   };
 
   const handleLeave = (e) => {
-    e.target.style.color = 'white';
+    e.target.style.color = "white";
   };
 
   return (
+    <>
     <div style={navStyle}>
       <Link
         to="/"
@@ -56,7 +57,7 @@ const Nav = () => {
       </Link>
 
       <Link
-        to="/profile"
+        to="/user/profile"
         style={linkStyle}
         onMouseEnter={handleHover}
         onMouseLeave={handleLeave}
@@ -72,6 +73,8 @@ const Nav = () => {
         College
       </Link>
     </div>
+    <Outlet/>
+    </>
   );
 };
 
