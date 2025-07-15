@@ -5,7 +5,9 @@ const User = () => {
     const {id} = useParams();
   return (
     <div>
-        <h3>Welcome User : {id}</h3>
+        {
+          id ? <h2>welcome !! : {id}</h2> : <p>user id dali hoti to accha hota</p>
+        }
     </div>
   )
 }
