@@ -1,17 +1,29 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { Handle, Position } from "reactflow";
 
 const CustomNode = ({ data }) => {
-  const onChange = useCallback((evt) => {
-    console.log(evt.target.value);
-  }, []);
-
   return (
     <div style={{ padding: 10, border: "2px solid black", borderRadius: 10 }}>
       <Handle type="target" position={Position.Top} />
 
       <p>{data.label}</p>
-      <input onChange={onChange} placeholder="Type here..." />
+
+      <input
+        value={data.text || ""}
+        onChange={(e) => data.onChange(e.target.value)}
+        placeholder="Type here..."
+      />
+    <Handle
+      type="source"
+      position={Position.Left}
+      style={{ background: "blue", width: 24, height: 24 }}
+    />
+
+    <Handle
+      type="source"
+      position={Position.Right}
+      style={{ background: "blue", width: 50, height: 50 }}
+    />
 
       <Handle type="source" position={Position.Bottom} />
     </div>
